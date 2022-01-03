@@ -433,21 +433,30 @@ void MainWindow::createActions()
     aboutAction = new QAction(tr("A&bout"), this);
     aboutAction->setShortcut(tr("F1"));
     connect(aboutAction, SIGNAL(triggered()), this, SLOT(about()));
+
+    newAction = new QAction(tr("N&ew"),this);
+    connect(newAction, SIGNAL(triggered()), this, SLOT(newFile()));
+
+
+
+
+
 }
 
 //! [24]
 void MainWindow::createMenus()
 {
-    fileMenu = menuBar()->addMenu(tr("&File"));
+    fileMenu = menuBar()->addMenu(tr("&文件"));
     fileMenu->addAction(exitAction);
+    fileMenu->addAction(newAction);
 
-    itemMenu = menuBar()->addMenu(tr("&Item"));
+    itemMenu = menuBar()->addMenu(tr("&编辑"));
     itemMenu->addAction(deleteAction);
     itemMenu->addSeparator();
     itemMenu->addAction(toFrontAction);
     itemMenu->addAction(sendBackAction);
 
-    aboutMenu = menuBar()->addMenu(tr("&Help"));
+    aboutMenu = menuBar()->addMenu(tr("&帮助"));
     aboutMenu->addAction(aboutAction);
 }
 //! [24]
@@ -641,3 +650,7 @@ QIcon MainWindow::createColorIcon(QColor color)
     return QIcon(pixmap);
 }
 //! [32]
+void MainWindow::newFile()
+{
+
+}

@@ -101,6 +101,7 @@ private slots:
     void handleFontChange();
     void itemSelected(QGraphicsItem *item);
     void about();
+    void newFile();
 
 private:
     void createToolBox();
@@ -125,6 +126,11 @@ private:
     QAction *toFrontAction;
     QAction *sendBackAction;
     QAction *aboutAction;
+
+    QAction *newAction;
+    QAction *openAction;
+    QAction *saveAction;
+
 
     QMenu *fileMenu;
     QMenu *itemMenu;
