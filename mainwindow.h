@@ -102,6 +102,7 @@ private slots:
     void itemSelected(QGraphicsItem *item);
     void about();
     void newFile();
+    void openFile();
 
 private:
     void createToolBox();

@@ -321,9 +321,7 @@ void MainWindow::itemSelected(QGraphicsItem *item)
 //! [20]
 void MainWindow::about()
 {
-    QMessageBox::about(this, tr("About Diagram Scene"),
-                       tr("The <b>Diagram Scene</b> example shows "
-                          "use of the graphics framework."));
+
 }
 //! [20]
 
@@ -437,7 +435,8 @@ void MainWindow::createActions()
     newAction = new QAction(tr("N&ew"),this);
     connect(newAction, SIGNAL(triggered()), this, SLOT(newFile()));
 
-
+    openAction = new QAction(tr("Open"),this);
+    connect(openAction, SIGNAL(triggered()), this, SLOT(openFile()));
 
 
 
@@ -651,6 +650,10 @@ QIcon MainWindow::createColorIcon(QColor color)
 }
 //! [32]
 void MainWindow::newFile()
+{
+
+}
+void MainWindow::openFile()
 {
 
 }
