@@ -1,4 +1,4 @@
-#include "diagramscene.h"
+    #include "diagramscene.h"
 #include "arrow.h"
 
 #include <QTextCursor>
